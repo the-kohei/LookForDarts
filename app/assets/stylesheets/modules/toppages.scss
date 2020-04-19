@@ -1,6 +1,48 @@
 * {
   box-sizing: border-box;
 }
+.header{
+  padding: 0 60px;
+  &__main{
+    max-width: 1040px;
+    width: 100%;
+    min-height: 100px;
+    margin:auto;
+    &--top{
+      height: 30px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &-icon {
+        margin-top: 40px;
+        a {
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        }
+      }
+    }
+    &--bottom{
+      display: flex;
+      justify-content: flex-end;
+      .review{
+        margin-right: 20px;
+      }
+      .maker-name {
+        margin-right: 20px;
+      }
+      .left-name{
+        margin-right: 20px;
+      }
+      a{
+        color: grey;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 
 .main {
   &__top {
@@ -14,7 +56,7 @@
       vertical-align: middle;
       text-align: center;
       position: relative;
-      h1 {
+      h2 {
         margin: 0 0 20px 45px;
         padding: 3em 0;
         color: white;
@@ -37,12 +79,12 @@
   &__text {
     
   }
-  h2 {
+  h3 {
     font-size: 30px;
     font-weight: bold;
     color: rgb(70, 69, 69);
   }
-  h3 {
+  h4 {
     color: rgb(70, 69, 69);
   }
   .products {
