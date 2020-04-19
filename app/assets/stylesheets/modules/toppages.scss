@@ -128,4 +128,34 @@
     }
   }
 }
-
+.app{
+  background-image:image-url('darts_main.jpg');
+  background-repeat: no-repeat;
+  padding: 100px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  &__main{
+    color: #fff;
+    text-align: center;
+    &--top{
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    }
+    &--midle{
+      font-size: 35px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+    &--bottom{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0;
+      .cbtn{
+        margin-right:10px;
+      }
+    }
+  }
+}
