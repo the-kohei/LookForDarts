@@ -2,9 +2,8 @@
   box-sizing: border-box;
 }
 .header{
-  padding: 0 60px;
+  padding: 0 40px;
   &__main{
-    max-width: 1040px;
     width: 100%;
     min-height: 100px;
     margin:auto;
@@ -16,7 +15,7 @@
       &-icon {
         margin-top: 40px;
         a {
-        font-size: 30px;
+        font-size: 25px;
         color: black;
         font-weight: bold;
         text-decoration: none;
@@ -26,6 +25,7 @@
     &--bottom{
       display: flex;
       justify-content: flex-end;
+      padding-left: 180px;
       .review{
         margin-right: 20px;
       }

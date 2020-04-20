@@ -8,12 +8,21 @@
       .header__main--bottom-right
       .review
         = link_to url="#"  do
-          口コミ
+          口コミから探す
       .maker-name
         = link_to url="#" do
-          メーカー
-      .left-name
-        = render "devise/shared/links"
-      .right-name
-        = link_to "#" do
-          新規登録
+          ダーツを探す▼
+      - if user_signed_in?
+        .left-name
+          = link_to '#' do
+            = current_user.name
+        .right-name
+          = link_to destroy_user_session_path,method: :delete do
+            ログアウト
+      - else
+        .left-name
+          = link_to new_user_session_path do
+            ログイン
+        .right-name
+          = link_to new_user_registration_path do
+            新規登録

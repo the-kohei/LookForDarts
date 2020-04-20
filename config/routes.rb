@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'toppages/index'
-
   root "toppages#index"
+  resources :users, only: [:edeit, :update]
 end
