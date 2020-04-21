@@ -1,21 +1,19 @@
+= render 'shared/header'
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 Edit Account
-      %h5 アカウントの編集
-      = link_to "ログアウト", '#', class: 'btn'
-      = link_to "トップページに戻る", :back, class: 'btn'
+      %h2 登録変更
     .account-page__inner--right.user-form
       = form_for(current_user) do |f|
         .field
           .field-label
-            = f.label :name
+            = f.label :名前
           .field-input
             = f.text_field :name, autofocus: true
         .field
           .field-label
-            = f.label :email
+            = f.label :メールアドレス
           .field-input
             = f.email_field :email
         .actions
-          = f.submit "Update", class: 'btn'
+          = f.submit "更新", class: 'btn'
