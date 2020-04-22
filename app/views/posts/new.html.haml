@@ -13,6 +13,12 @@
             = f.text_field :title
         .field
           .field-label
+            = f.label :画像
+            %i (必須)
+          .field-input
+            -# = f.file_filed :products_id
+        .field
+          .field-label
             = f.label :ダーツ種類
             %i (必須)
           .field-input
@@ -29,3 +35,4 @@
             = f.text_area :text, size: "30x5"
         .actions
           = f.submit "投稿", class: 'btn'
+= render 'shared/footer'
