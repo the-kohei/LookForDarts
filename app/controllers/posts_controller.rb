@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @posts = Post.limit(8).order('id DESC')
   end
 
   def new
@@ -11,8 +11,13 @@ class PostsController < ApplicationController
     Post.create(post_params)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+  end
+
   private
   def post_params
-    params.permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
 end

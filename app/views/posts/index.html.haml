@@ -4,116 +4,19 @@
     .content__top__title
       口コミ一覧
     .content__top__category
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-      .products
-        .products__item-image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item-body
-          .products__item-body__name
-            ダーツ
-          .products__item-body__data
-            %ul
-              %li
-                種類：フライト
-              %li
-              %li
-                メーカー：エルスタイル
-              %li
-= render 'shared/footer'
+      - @posts.each do |post|
+        .products
+          .products__item-image
+            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
+          .products__item-body
+            .products__item-body__name
+              = post.title
+            .products__item-body__data
+              %ul
+                %li
+                  種類：フライト
+                %li
+                %li
+                  メーカー：エルスタイル
+                %li
+      
