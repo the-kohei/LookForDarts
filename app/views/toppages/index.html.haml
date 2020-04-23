@@ -9,48 +9,24 @@
       %h3 LookForDartsとは
       %h4 ダーツってたくさん種類があって迷いますよね？
       %h4 そんな方へのおすすめのダーツの口コミ共有サービスです。
-  .products
-    .products__new
+  .product
+    .product__new
       %h3 新着アイテム
-    .products__new__item
-      .products__new__item__image
-        =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-      .products__new__item__body
-        .products__new__item__body__name
-          種類: Lフライト
-        .products__new__item__body__data
-          %ul
-            %li
-              メーカー: LSTYLE
-    .products__new__item
-      .products__new__item__image
-        =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-      .products__new__item__body
-        .products__new__item__body__name
-          種類: Lフライト
-        .products__new__item__body__data
-          %ul
-            %li
-              メーカー: LSTYLE
-    .products__new__item
-      .products__new__item__image
-        =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-      .products__new__item__body
-        .products__new__item__body__name
-          種類: Lフライト
-        .products__new__item__body__data
-          %ul
-            %li
-              メーカー: LSTYLE
-    .products__new__item
-      .products__new__item__image
-        =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-      .products__new__item__body
-        .products__new__item__body__name
-          種類: Lフライト
-        .products__new__item__body__data
-          %ul
-            %li
-              メーカー: LSTYLE
+  .products
+    - @posts.each do |post|
+      .products__item
+        .products__item__image
+          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
+        .products__item__body
+          .products__item__body__title
+            = post.title
+          .products__item__body__category
+            %ul
+              %li
+                種類: Lフライト
+          .products__item__body__maker
+            %ul
+              %li
+                メーカー: LSTYLE
 = render 'shared/shop'
 = render 'shared/footer'

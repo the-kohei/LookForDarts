@@ -86,41 +86,43 @@
   h4 {
     color: rgb(70, 69, 69);
   }
-  .products {
+  .product {
     &__new {
       margin:auto;
       display: flex;
       justify-content: space-around;
-      &__item {
+    }
+  }
+  .products {
+    &__item {
+      width: 220px;
+      display: inline-block;
+      margin: 60px;
+      &__image {
         width: 220px;
-        display: inline-block;
-        margin: 60px;
-        &__image {
-          width: 220px;
-          height: 200px;
-          position: relative;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        z-index: auto;
+      }
+      &__body {
+        padding: 16px;
+        color: #5d627b;
+        background: white;
+        border-top: solid 5px #5d627b;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        &__title {
           overflow: hidden;
-          z-index: auto;
+          line-height: 1.5;
+          font-size: 20px;
+          text-align: center;
         }
-        &__body {
-          padding: 16px;
-          color: #5d627b;
-          background: white;
-          border-top: solid 5px #5d627b;
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-          &__name {
-            overflow: hidden;
-            line-height: 1.5;
-            font-size: 16px;
-            text-align: left;
-          }
-          &__data {
-            font-size: 16px;
-            ul {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-            }
+        &__category {
+          font-size: 16px;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
           }
         }
       }
