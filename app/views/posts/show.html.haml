@@ -2,7 +2,7 @@
 .content
   .content__top
     .content__top__title
-      口コミ一覧
+      〇〇さん投稿一覧
     .content__top__category
       - @posts.each do |post|
         .products
@@ -10,8 +10,7 @@
             =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
           .products__item-body
             .products__item-body__name
-              = link_to "#" do
-                = post.title
+              = post.title
             .products__item-body__data
               %ul
                 %li
