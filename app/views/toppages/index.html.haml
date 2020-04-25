@@ -19,7 +19,8 @@
           =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
         .products__item__body
           .products__item__body__title
-            = post.title
+            =link_to post_path(current_user) do
+              = post.title
           .products__item__body__category
             %ul
               %li
