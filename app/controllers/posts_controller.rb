@@ -25,10 +25,6 @@ class PostsController < ApplicationController
     post.update(post_params)
   end
 
-  def show
-    
-  end
-
   private
   def post_params
     params.require(:post).permit(:title, :text).merge(user_id: current_user.id)
