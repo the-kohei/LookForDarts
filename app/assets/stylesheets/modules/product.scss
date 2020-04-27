@@ -1,0 +1,68 @@
+.product {
+  background-color: whitesmoke;
+  padding: 0 20px 100px 20px;
+  &__top {
+  padding: 40px 30px;
+  width: 100%;
+  height: auto;
+    &__title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.4;
+    color: #464545;
+    font-weight: bold;
+    }
+  }
+  &__main {
+  height: auto;
+  width: 800px;
+  margin: 0 auto;
+  
+  
+    &__item {
+      display: flex;
+      background-color: white;
+      padding: 20px;
+      &__image {
+      height: 350px;
+      width: 400px;
+      margin: 50px 0 50px 0;
+      }
+      &__name {
+      width: 400px;
+      padding: 30px;
+        &__title {
+        text-align: center;
+        font-weight: bold;
+        color: #464545;
+        font-size: 25px;
+        margin: 10px;
+        }
+        .table {
+          display: table;
+          border-collapse: collapse;
+          width: 100%;
+          padding: 20px;
+        }
+        th {
+          border: solid 1px rgb(204, 204, 204);
+          background-color: rgb(243, 240, 240);
+          width: 150px;
+          text-align: center;
+          font-weight: bold;
+          padding: 15px;
+        }
+        td {
+          border: solid 1px rgb(204, 204, 204);
+          width: 300px;
+          text-align: center;
+        }
+        td.text{
+          font-size: 12px;
+          text-align: left;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
