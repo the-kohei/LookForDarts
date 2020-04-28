@@ -1,14 +1,16 @@
 .account-page {
+  width: 100%;
   .account-page__inner {
     padding: 60px;
-    background-image:image-url('geisya-darts.jpg');
+    background-color: whitesmoke;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
     .account-page__inner--left, .account-page__inner--right {
-      float: left;
-      width: 100%;
-
+      margin: auto;
+      width: 500px;
+      padding: 20px 0 20px 0;
+      background-image:image-url('geisya-darts.jpg');
     }
     &:after {
       clear: both;
@@ -19,8 +21,6 @@
 
   .account-page__header {
     h2 {
-      margin-bottom: 10px;
-      letter-spacing: 3px;
       font-size: 30px;
       font-weight: bold;
 
@@ -28,7 +28,6 @@
         content: '';
         display: block;
         width: 60px;
-        margin-top: 5px;
       }
     }
     h3 {
@@ -68,7 +67,11 @@
       }
     }
   }
-
+  & img {
+    display: flex;
+    height: 100px;
+    margin: auto;
+  }
   .btn {
     display: inline-block;
     height: 50px;
