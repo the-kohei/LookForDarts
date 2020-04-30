@@ -2,5 +2,7 @@ class Post < ApplicationRecord
   validates :title, presence: true
   belongs_to :user
   belongs_to :product
-  has_many :coments
+  belongs_to :category
+  belongs_to :maker
+
 end
