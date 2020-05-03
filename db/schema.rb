@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20200502104236) do
     t.integer  "category_id"
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
     t.index ["maker_id"], name: "index_posts_on_maker_id", using: :btree
-    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -74,6 +73,5 @@ ActiveRecord::Schema.define(version: 20200502104236) do
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "makers"
-  add_foreign_key "posts", "users"
   add_foreign_key "products", "posts"
 end
