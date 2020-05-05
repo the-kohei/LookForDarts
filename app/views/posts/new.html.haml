@@ -16,8 +16,8 @@
             = f.label :画像
             %i (必須)
           .field-input
-            -# %form{:enctype => "multipart/form-data", :method => "post"}
-            -#   %input{:accept => "image/*", :name => "userfile", :type => "file",:class => "image"}/
+            %form{:enctype => "multipart/form-data", :method => "post"}
+              %input{:accept => "image/*", :name => "userfile", :type => "file",:class => "image"}/
         .field
           .field-label
             = f.label :ダーツ種類
