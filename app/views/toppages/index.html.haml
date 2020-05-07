@@ -18,16 +18,19 @@
         .products__item__image
           =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
         .products__item__body
-          .products__item__body__title
+          .products__item__body__title 
             = link_to product_path(current_user) do
-              = post.title
+              %a
+                = post.title
           .products__item__body__category
             %ul
+              種類
               %li
-                種類: Lフライト
+                フライト
           .products__item__body__maker
             %ul
+              メーカー
               %li
-                メーカー: LSTYLE
+                LSTYLE
 = render 'shared/shop'
 = render 'shared/footer'

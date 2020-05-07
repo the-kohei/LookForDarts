@@ -113,16 +113,34 @@
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
         &__title {
           overflow: hidden;
+          padding: 10px;
           line-height: 1.5;
           font-size: 20px;
           text-align: center;
+          font-weight: bold;
+          border-bottom: solid 1px;
+          a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #5d627b;
+          }
+
         }
         &__category {
           font-size: 16px;
-          ul {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+          padding: 5px 30px 5px 30px;
+          text-align: center;
+          border-bottom: solid 1px;
+        }
+        &__maker {
+          font-size: 16px;
+          padding: 5px 30px 5px 30px;
+          text-align: center;
+        }
+        ul {
+          font-weight: bold;
+          li {
+            font-size: 20px;
           }
         }
       }
