@@ -11,7 +11,7 @@
       %h4 そんな方へのおすすめのダーツの口コミ共有サービスです。
   .product
     .product__new
-      %h3 新着アイテム
+      %h3 新着口コミ
   .products
     - @posts.each do |post|
       .products__item
@@ -24,12 +24,12 @@
                 = post.title
           .products__item__body__category
             %ul
-              種類
+              種類 :
               %li
                 フライト
           .products__item__body__maker
             %ul
-              メーカー
+              メーカー :
               %li
                 LSTYLE
 = render 'shared/shop'
