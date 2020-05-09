@@ -19,14 +19,15 @@
           =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
         .products__item__body
           .products__item__body__title 
-            = link_to product_path(current_user) do
-              %a
+            %a
+              = link_to product_path(current_user) do
                 = post.title
           .products__item__body__category
             %ul
               種類 :
               %li
-                フライト
+                = link_to categories_path(current_user) do
+                  -# = @category.name
           .products__item__body__maker
             %ul
               メーカー :

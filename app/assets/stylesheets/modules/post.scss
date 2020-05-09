@@ -33,15 +33,34 @@
           &__name{
           overflow: hidden;
           line-height: 1.5;
-          font-size: 22px;
+          font-size: 20px;
           text-align: center;
+          font-weight: bold;
+            a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #5d627b;
+            }
           }
           &__data{
-            font-size: 16px;
-            ul{
-              align-items: center;
-              justify-content: space-between;
-            }
+            text-align: center;
+          }
+          &__maker{
+            text-align: center;
+          }
+          ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+            padding-left: 20px;
+          }
+          li {
+            font-size: 15px;
+            font-weight: normal;
+            margin: 0 auto;
           }
         }
       }
