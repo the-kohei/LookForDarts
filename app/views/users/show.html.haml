@@ -1,0 +1,24 @@
+= render 'shared/header'
+.content
+  .content__top
+    .content__top__title
+      = @name
+      さんの投稿一覧
+    .content__top__category
+      - @posts.each do |post|
+        .products
+          .products__item-image
+            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
+          .products__item-body
+            .products__item-body__name
+              = link_to "#" do
+                = post.title
+            .products__item-body__data
+              %ul
+                %li
+                  種類：フライト
+                %li
+                %li
+                  メーカー：エルスタイル
+                %li
+= render 'shared/footer'

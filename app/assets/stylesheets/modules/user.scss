@@ -31,19 +31,22 @@
       }
     }
     h3 {
-      margin: 50px 0 100px 0;
+      margin: 50px 0 35px 0;
       letter-spacing: 3px;
       font-size: 30px;
       font-weight: bold;
 
       
     }
-
-    .btn {
-      margin-top: 20px;
-      color: #fff;
-      background-color: #ccc;
-      font-size: 14px;
+  }
+  .account-page__index{
+    h4 {
+      font-weight: bold;
+      color: blue;
+      font-size: 15px;
+    }
+    a {
+      text-decoration: none;
     }
   }
 
