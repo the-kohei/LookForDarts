@@ -32,6 +32,12 @@
             %ul
               メーカー :
               %li
-                LSTYLE
+                -# = link_to makers_path(current_user) do
+          .products__item__body__name
+            %ul
+              投稿者 :
+              %li
+                = link_to "/users/#{current_user.id}" do
+                  = @name
 = render 'shared/shop'
 = render 'shared/footer'

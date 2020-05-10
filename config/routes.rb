@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users, only: [:edeit, :update, :show]
   resources :posts, only: [:index, :new, :create, :destroy, :update, :edit]
   resources :products, only: [:show]
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
+  resources :makers, only: [:index, :show]
 end

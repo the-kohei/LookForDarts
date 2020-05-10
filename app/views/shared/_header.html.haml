@@ -21,9 +21,11 @@
                   = link_to posts_path  do
                     口コミから
                 %li
-                  %a{:href => "#"} メーカーから
+                  = link_to categories_path do
+                    カテゴリーから
                 %li
-                  %a{:href => "#"} カテゴリーから
+                  = link_to makers_path do
+                    メーカーから
       - if user_signed_in?
         .maker-name
           %ul

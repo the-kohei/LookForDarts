@@ -1,25 +1,48 @@
 = render 'shared/header'
-.content
-  .content__top
-    .content__top__title
-      フライト一覧
-    .content__top__category
-      - @categories.each do |category|
-        .products
-          .products__item-image
-            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-          .products__item-body
-            .products__item-body__name
-              = link_to "#" do
-                タイトル
-            .products__item-body__data
-              %ul
-                種類：
-                %li
-                  フライト
-            .products__item-body__maker
-              %ul
-                メーカー：
-                %li
-                  エルスタイル
+.contents
+  .contents__top
+    .contents__top__title
+      カテゴリーから探す
+    .contents__top__category
+      .producter
+        .producter__item-image
+          = link_to "#" do
+            =image_tag 'bareru1.jpg', height: '100%', width: '100%', class: 'iamge10'
+        .producter__item-body
+          .producter__item-body__name
+            = link_to "#" do
+              バレル
+      .producter
+        .producter__item-image
+          = link_to "#" do
+            =image_tag 'furaito1.jpg', height: '100%', width: '100%', class: 'iamge10'
+        .producter__item-body
+          .producter__item-body__name
+            = link_to "#" do
+              フライト
+      .producter
+        .producter__item-image
+          = link_to "#" do
+            =image_tag 'shafuto1.jpg', height: '100%', width: '100%', class: 'iamge10'
+        .producter__item-body
+          .producter__item-body__name
+            = link_to "#" do
+              シャフト
+      .producter
+        .producter__item-image
+          = link_to "#" do
+            =image_tag 'tippu.jpg', height: '100%', width: '100%', class: 'iamge10'
+        .producter__item-body
+          .producter__item-body__name
+            = link_to "#" do
+              ティップ
+      .producter
+        .producter__item-image
+          = link_to "#" do
+            =image_tag 'sonota.jpg', height: '100%', width: '100%', class: 'iamge10'
+        .producter__item-body
+          .producter__item-body__name
+            = link_to "#" do
+              その他
+
 = render 'shared/footer'
