@@ -14,11 +14,9 @@
     margin: 20px;
     }
     &__category {
-      margin:auto;
-      padding: 30px;
+      display: flex;
+      justify-content: space-around;
       .maker{
-        display: inline-block;
-        margin: 2px;
         &__item-image{
         width: 70px;
         height: 60px;
