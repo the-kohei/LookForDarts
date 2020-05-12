@@ -7,3 +7,5 @@
 @import "modules/category";
 @import "modules/maker";
 @import "modules/flash";
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";

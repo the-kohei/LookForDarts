@@ -11,12 +11,13 @@
     line-height: 1.4;
     color: #464545;
     font-weight: bold;
-    margin: 20px;
+    margin: 10px 20px 50px 20px;
     }
     &__category {
       display: flex;
       justify-content: space-around;
       .producter{
+        text-align: center;
         &__item-image{
         width: 150px;
         height: 120px;

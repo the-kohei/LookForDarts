@@ -3,41 +3,42 @@
   .main__top
     .main__top--content
       %h2 お気に入りのダーツを共有しよう
-.container
-  .container__title
-    .container__title__text
+.contain
+  .contain__title
+    .contain__title__text
       %h3 LookForDartsとは
       %h4 ダーツってたくさん種類があって迷いますよね？
       %h4 そんな方へのおすすめのダーツの口コミ共有サービスです。
-  .product
-    .product__new
-      %h3 新着口コミ
-  .products
-    - @posts.each do |post|
-      .products__item
-        .products__item__image
-          =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
-        .products__item__body
-          .products__item__body__title 
-            %a
-              = link_to product_path(current_user) do
-                = post.title
-          .products__item__body__category
-            %ul
-              種類 :
-              %li
-                = link_to categories_path(current_user) do
-                  -# = @category.name
-          .products__item__body__maker
-            %ul
-              メーカー :
-              %li
-                -# = link_to makers_path(current_user) do
-          .products__item__body__name
-            %ul
-              投稿者 :
-              %li
-                = link_to "/users/#{current_user.id}" do
-                  = @name
+  .main-page
+    .product
+      .product__new
+        %h3 新着口コミ
+    .products
+      - @posts.each do |post|
+        .products__item
+          .products__item__image
+            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
+          .products__item__body
+            .products__item__body__title 
+              %a
+                = link_to product_path(current_user) do
+                  = post.title
+            .products__item__body__category
+              %ul
+                種類 :
+                %li
+                  = link_to categories_path(current_user) do
+                    -# = @category.name
+            .products__item__body__maker
+              %ul
+                メーカー :
+                %li
+                  -# = link_to makers_path(current_user) do
+            .products__item__body__name
+              %ul
+                投稿者 :
+                %li
+                  = link_to "/users/#{current_user.id}" do
+                    = @name
 = render 'shared/shop'
 = render 'shared/footer'
