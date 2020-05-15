@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200511145230) do
+ActiveRecord::Schema.define(version: 20200514100326) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "image"
+    t.string   "image",      null: false
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20200511145230) do
     t.integer  "user_id"
     t.integer  "maker_id"
     t.integer  "category_id"
+    t.string   "image",                     null: false
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
     t.index ["maker_id"], name: "index_posts_on_maker_id", using: :btree
   end
