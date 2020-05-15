@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20200511145230) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "image", null: false
+    t.string   "image"
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -48,14 +48,6 @@ ActiveRecord::Schema.define(version: 20200511145230) do
     t.index ["maker_id"], name: "index_posts_on_maker_id", using: :btree
   end
 
-  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "image",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "post_id"
-    t.index ["post_id"], name: "index_products_on_post_id", using: :btree
-  end
-
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
@@ -74,5 +66,4 @@ ActiveRecord::Schema.define(version: 20200511145230) do
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "makers"
-  add_foreign_key "products", "posts"
 end

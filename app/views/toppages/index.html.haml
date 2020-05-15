@@ -6,7 +6,7 @@
 .contain
   .contain__title
     .contain__title__text
-      %h3 LookForDartsとは
+      %h2 LookForDartsとは
       %h4 ダーツってたくさん種類があって迷いますよね？
       %h4 そんな方へのおすすめのダーツの口コミ共有サービスです。
   .main-page
@@ -21,7 +21,7 @@
           .products__item__body
             .products__item__body__title 
               %a
-                = link_to product_path(current_user) do
+                = link_to post_path(current_user) do
                   = post.title
             .products__item__body__category
               %ul

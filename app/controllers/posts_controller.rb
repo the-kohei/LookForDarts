@@ -8,8 +8,12 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.create(post_params)
+  end
 
-    Post.create(post_params)
+  def show
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
   def destroy
@@ -32,6 +36,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :text, :category_id, :maker_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :text, :image, :category_id, :maker_id).merge(user_id: current_user.id)
   end
 end

@@ -1,0 +1,60 @@
+= render 'shared/header'
+.product
+  .product__top
+    .product__top__title
+      投稿詳細
+    .product__top__category
+  .product__main
+    .product__main__item
+      .product__main__item__image
+        =image_tag 'furaito.jpg', height: '100%', width: '100%'
+      .product__main__item__name
+        .product__main__item__name__title
+          ダーツのフライト
+        .table
+          %table
+            %tr
+              %th.name 投稿者
+              %td 山野
+            %tr
+              %th.category カテゴリー
+              %td フライト
+            %tr
+              %th.maker メーカー
+              %td エルスタイル
+            %tr
+              %th.text 説明
+              %td.text とてもデザインがかっこいしいけています。しかもかなりオシャレこれはとてももいいよね。めっちゃおすすめだよ。買わないと損するよ。みんな買っちゃえ。
+  .comment
+    .comment__main
+      .comment__main__item
+        - if current_user
+          = form_with(model: [@tweet, @comment],local: true) do |form|
+            = form.text_area :text, placeholder: "コメントする",rows:"4" 
+            = form.submit "コメントする"
+        - else
+          %strong
+            %p ※コメント投稿には新規登録/ログインが必要です※
+
+        -# = form_for "#" do |f|
+        -#   .field-input
+        -#     = f.text_area :text,rows:4,cols:55  ,class:"textarea"
+        -#   .actions
+        -#     = icon('fas','comment', class: 'comment-icon')
+        -#     = f.submit "コメントする", class: 'submit-btn'
+      .message
+        .message__title
+          %h6 <コメント一覧>
+        .message__main
+          .message__main__name
+            - if @comments
+              - @comments.each do |comment|
+                %p
+                  %strong
+                    = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                  = comment.text
+            -# = link_to "#" do
+            -#   %h5 山口
+            -# .message__name__text
+            -#   とても良さそうですね。
+= render 'shared/footer'
