@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
   def index
     @posts = Post.includes(:user).limit(8).order('id DESC').page(params[:page]).per(8)
   end
@@ -34,8 +35,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :text, :image, :category_id, :maker_id).merge(user_id: current_user.id)
   end
+end
+
+def move_to_index
+  redirect_to action: :index unless user_signed_in?
 end
