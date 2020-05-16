@@ -17,28 +17,29 @@
       - @posts.each do |post|
         .products__item
           .products__item__image
-            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
+            = link_to "#" do
+              =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
           .products__item__body
             .products__item__body__title 
               %a
-                = link_to post_path(current_user) do
+                = link_to "#" do
                   = post.title
             .products__item__body__category
               %ul
                 種類 :
                 %li
-                  = link_to categories_path(current_user) do
-                    -# = @category.name
+                  = link_to "#" do
+                    フライト
             .products__item__body__maker
               %ul
                 メーカー :
                 %li
-                  -# = link_to makers_path(current_user) do
+                  = link_to "#" do
+                    ターゲット
             .products__item__body__name
               %ul
                 投稿者 :
                 %li
-                  = link_to "/users/#{current_user.id}" do
-                    = @name
+                  = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
 = render 'shared/shop'
 = render 'shared/footer'

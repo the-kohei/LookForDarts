@@ -35,6 +35,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def user_posts
+    user = User.find(params[:user_id])
+    @posts = user.posts.limit(8).order('id DESC').page(params[:page]).per(8)
+    @name = user.name
+  end
+
   def search
     @posts = Post.search(params[:keyword])
   end

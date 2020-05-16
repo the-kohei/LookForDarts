@@ -35,13 +35,6 @@
         - else
           %strong
             %p ※コメント投稿には新規登録/ログインが必要です※
-
-        -# = form_for "#" do |f|
-        -#   .field-input
-        -#     = f.text_area :text,rows:4,cols:55  ,class:"textarea"
-        -#   .actions
-        -#     = icon('fas','comment', class: 'comment-icon')
-        -#     = f.submit "コメントする", class: 'submit-btn'
       .message
         .message__title
           %h6 <コメント一覧>
@@ -53,8 +46,4 @@
                   %strong
                     = link_to comment.user.nickname, "/users/#{comment.user_id}"
                   = comment.text
-            -# = link_to "#" do
-            -#   %h5 山口
-            -# .message__name__text
-            -#   とても良さそうですね。
 = render 'shared/footer'

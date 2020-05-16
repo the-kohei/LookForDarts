@@ -13,17 +13,24 @@
           .products__item-image
             =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
           .products__item-body
-            .products__item-body__name
+            .products__item-body__title
               = link_to "#" do
                 = post.title
-            .products__item-body__data
+            .products__item-body__category
               %ul
+                種類：
                 %li
-                  種類：フライト
+                  
+            .products__item__body__maker
+              %ul
+                メーカー：
                 %li
+                  
+            .products__item__body__name
+              %ul
+                投稿者：
                 %li
-                  メーカー：エルスタイル
-                %li
+                  
       .paginate
         =paginate(@posts)
 = render 'shared/footer'

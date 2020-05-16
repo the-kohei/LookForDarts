@@ -33,8 +33,8 @@
         color: #5d627d;
         border-top: solid 5px #5d627d;
         box-shadow: 0 3px 5px rgba(0,0,0,0.22);
-        padding: 16px;
-          &__name{
+        padding: 10px;
+          &__title{
           overflow: hidden;
           line-height: 1.5;
           font-size: 20px;
@@ -46,7 +46,7 @@
             color: #5d627b;
             }
           }
-          &__data{
+          &__category{
             text-align: center;
           }
           &__maker{

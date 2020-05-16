@@ -16,8 +16,8 @@
             = f.label :画像
             %i (必須)
           .field-input
-            -# = form_for @post do |f|
-            -#   = f.file_field :image
+            = form_for @post do |f|
+              = f.file_field :image
         .field
           .field-label
             = f.label :ダーツ種類
@@ -27,6 +27,7 @@
         .field
           .field-label
             = f.label :メーカー
+            %i (必須)
           .field-Choose
             = f.collection_select(:maker_id, Maker.all, :id, :name, prompt: "メーカーを選択してください", class: "form")
         .field
