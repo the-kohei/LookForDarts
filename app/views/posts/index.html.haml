@@ -30,7 +30,7 @@
               %ul
                 投稿者：
                 %li
-                  
+                  = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
       .paginate
         =paginate(@posts)
 = render 'shared/footer'
