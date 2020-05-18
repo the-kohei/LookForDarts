@@ -15,13 +15,18 @@
           %table
             %tr
               %th.name 投稿者
-              %td 山野
+              %td
+                -# = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
             %tr
               %th.category カテゴリー
-              %td フライト
+              %td
+                = link_to "#" do
+                  フライト
             %tr
               %th.maker メーカー
-              %td エルスタイル
+              %td
+                = link_to "#" do
+                  LSTYLE
             %tr
               %th.text 説明
               %td.text とてもデザインがかっこいしいけています。しかもかなりオシャレこれはとてももいいよね。めっちゃおすすめだよ。買わないと損するよ。みんな買っちゃえ。
