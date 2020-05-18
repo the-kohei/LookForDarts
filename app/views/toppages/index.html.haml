@@ -25,16 +25,16 @@
                   = post.title
             .products__item__body__category
               %ul
-                種類 :
+                カテゴリー :
                 %li
                   = link_to "#" do
-                    フライト
+                    = post.category.name
             .products__item__body__maker
               %ul
                 メーカー :
                 %li
                   = link_to "#" do
-                    ターゲット
+                    = post.maker.name
             .products__item__body__name
               %ul
                 投稿者 :

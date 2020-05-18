@@ -15,7 +15,8 @@ class PostsController < ApplicationController
   def show
     @comment = Comment.new
     @post = Post.find(params[:id])
-    @comments = @post.comments.includes(:user)
+    @comments = @post.comments.includes(:user).limit(8).order('id DESC').page(params[:page]).per(5)
+    
   end
 
   def destroy

@@ -7,29 +7,33 @@
   .product__main
     .product__main__item
       .product__main__item__image
-        =image_tag 'furaito.jpg', height: '100%', width: '100%'
+        = image_tag(@post.image.to_s, height: '100%', width: '100%')
       .product__main__item__name
         .product__main__item__name__title
-          ダーツのフライト
+          = link_to "#" do
+            = @post.title
         .table
           %table
             %tr
               %th.name 投稿者
               %td
+                = link_to "/posts/user_posts" do
+                  = @post.user.name
                 -# = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
             %tr
               %th.category カテゴリー
               %td
                 = link_to "#" do
-                  フライト
+                  = @post.category.name
             %tr
               %th.maker メーカー
               %td
                 = link_to "#" do
-                  LSTYLE
+                  = @post.maker.name
             %tr
               %th.text 説明
-              %td.text とてもデザインがかっこいしいけています。しかもかなりオシャレこれはとてももいいよね。めっちゃおすすめだよ。買わないと損するよ。みんな買っちゃえ。
+              %td.text
+                = @post.text
   .comment
     .comment__main
       .comment__main__item
@@ -49,7 +53,9 @@
             - @comments.each do |comment|
               .message__main__content
                 .message__main__content__left
-                  = link_to comment.user.name, "/users/#{comment.user_id}"
+                  = link_to comment.user.name, user_posts_posts_path(user_id: comment.user.id)
                 .message__main__content__right
                   = comment.text
+        .paginate
+          =paginate(@comments)
 = render 'shared/footer'
