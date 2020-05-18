@@ -29,21 +29,22 @@
     .comment__main
       .comment__main__item
         - if current_user
-          = form_with(model: [@tweet, @comment],local: true) do |form|
+          = form_with(model: [@post, @comment],local: true) do |form|
             = form.text_area :text, placeholder: "コメントする",rows:"4" 
             = form.submit "コメントする"
         - else
           %strong
             %p ※コメント投稿には新規登録/ログインが必要です※
-      .message
-        .message__title
+      .comments
+        .comments__title
           %h6 <コメント一覧>
+      .message
         .message__main
-          .message__main__name
-            - if @comments
-              - @comments.each do |comment|
-                %p
-                  %strong
-                    = link_to comment.user.nickname, "/users/#{comment.user_id}"
+          - if @comments
+            - @comments.each do |comment|
+              .message__main__content
+                .message__main__content__left
+                  = link_to comment.user.name, "/users/#{comment.user_id}"
+                .message__main__content__right
                   = comment.text
 = render 'shared/footer'
