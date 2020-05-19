@@ -43,6 +43,12 @@ class PostsController < ApplicationController
     @name = user.name
   end
 
+  def category_posts
+    category = Category.find(params[:category_id])
+    @posts = category.posts.limit(8).order('id DESC').page(params[:page]).per(8)
+    @name = category.name
+  end
+
   def search
     @posts = Post.search(params[:keyword])
   end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :create, :destroy, :update, :edit, :show,] do
     collection do
       get 'user_posts'
+      get 'category_posts'
     end
     resources :comments, only: :create
     collection do

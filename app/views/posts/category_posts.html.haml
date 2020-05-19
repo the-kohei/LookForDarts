@@ -2,34 +2,31 @@
 .content
   .content__top
     .content__top__title
-      口コミ一覧
-    .content__top__search
-      = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
-        = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
-        = form.submit "検索", class: "search-btn"
+      = @name
+      の投稿一覧
     .content__top__category
       - @posts.each do |post|
         .products
           .products__item-image
-            =link_to image_tag(post.image.to_s, height: '100%', width: '100%', class: 'iamge10'), "/posts/#{post.id}"
+            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
           .products__item-body
             .products__item-body__title
-              = link_to  "/posts/#{post.id}" do
+              = link_to "#" do
                 = post.title
             .products__item-body__contents
               .products__item-body__contents__left
                 .products__item-body__contents__left__menu
-                %ul
-                  カテゴリー：
-                %ul
-                  メーカー :
-                %ul
-                  投稿者 :
+                  %ul
+                    カテゴリー：
+                  %ul
+                    メーカー :
+                  %ul
+                    投稿者 :
               .products__item-body__contents__right
                 .products__item-body__contents__right__link
                   %li
-                    = link_to post.category.name, category_posts_posts_path(category_id: post.category.id)
-                      
+                    = link_to "#"  do
+                      = post.category.name
                   %li
                     = link_to "#"  do
                       = post.maker.name
