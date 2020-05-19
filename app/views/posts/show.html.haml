@@ -39,13 +39,10 @@
         .post__content__create
           %h7
             編集
-        .post__content__destroy
-          %h7
-            削除
-      
-
-
-
+        = link_to "/posts/#{@post.id}", method: :delete do
+          .post__content__destroy
+            %h7
+              削除
   .comment
     .comment__main
       .comment__main__item
