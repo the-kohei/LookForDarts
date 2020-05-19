@@ -33,7 +33,7 @@
             %tr
               %th.text 説明
               %td.text
-                = @post.text
+                = simple_format(@post.text)
   .comment
     .comment__main
       .comment__main__item
@@ -55,7 +55,7 @@
                 .message__main__content__left
                   = link_to comment.user.name, user_posts_posts_path(user_id: comment.user.id)
                 .message__main__content__right
-                  = comment.text
+                  = simple_format(comment.text)
         .paginate
           =paginate(@comments)
 = render 'shared/footer'
