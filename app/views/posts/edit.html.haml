@@ -10,29 +10,31 @@
             = f.label :タイトル
             %i (必須)
           .field-input
-            = f.text_field :title
+            = f.text_field :title, placeholder: "商品名（必須40文字まで）"
         .field
           .field-label
             = f.label :画像
             %i (必須)
-          .field-input
-            -# = f.file_filed :products_id
+        .field-input
+          = f.file_field :image
         .field
           .field-label
             = f.label :ダーツ種類
             %i (必須)
-          .field-input
-            -# = f.collection_select(:category_id, @categorys, :id, :name )
+          .field-Choose
+            = f.collection_select(:category_id, Category.all, :id, :name,prompt: "カテゴリーを選択してください", class: "form")
         .field
           .field-label
             = f.label :メーカー
-          .field-input
-            -# = f.collection_select(:maker_id, @makers, :id, :name )
+            %i (必須)
+          .field-Choose
+            = f.collection_select(:maker_id, Maker.all, :id, :name, prompt: "メーカーを選択してください", class: "form")
         .field
           .field-label
             = f.label :詳細
+            %i (必須)
           .field-input
-            = f.text_area :text, size: "30x5"
+            = f.text_area :text, size: "30x5", placeholder: "使ってみた感想（必須）"
         .actions
           = f.submit "投稿", class: 'btn'
 = render 'shared/footer'
