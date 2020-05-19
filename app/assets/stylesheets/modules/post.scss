@@ -23,7 +23,7 @@
         margin: 50px;
         &__item-image{
         width: 300px;
-        height: 300px;
+        height: 250px;
         position: relative;
         overflow: hidden;
         z-index: auto;
@@ -35,37 +35,41 @@
         box-shadow: 0 3px 5px rgba(0,0,0,0.22);
         padding: 10px;
           &__title{
-          overflow: hidden;
-          line-height: 1.5;
-          text-align: center;
-          font-weight: bold;
-          margin: 15px 0 15px 0;
+            overflow: hidden;
+            line-height: 1.5;
+            text-align: center;
+            font-weight: bold;
+            margin: 15px 0 20px 0;
             a {
             font-weight: bold;
             font-size: 18px;
-            text-decoration: none;
-            color: #5d627b;
             }
           }
-          &__category{
-            text-align: center;
-          }
-          &__maker{
-            text-align: center;
-          }
-          ul{
+          &__contents {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 15px;
-            text-align: center;
-            padding-left: 20px;
-          }
-          li {
-            font-size: 15px;
-            font-weight: normal;
-            margin: 0 auto;
+            &__left{
+              &__menu{
+                text-align: center;
+              }
+
+            }
+            &__right{
+              margin-left: 40px;
+              &__link{
+                text-align: center;
+                
+              }
+            }
+            ul{
+              font-weight: bold;
+              font-size: 15px;
+              margin-left: 30px;
+            }
+            li {
+              font-size: 15px;
+              list-style: none;
+              margin-bottom: 16px;
+            }
           }
         }
       }
