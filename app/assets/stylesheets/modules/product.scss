@@ -25,6 +25,7 @@
         height: 350px;
         width: 400px;
         margin: 50px 0 50px 0;
+        padding-left: 30px;
       }
       &__name {
         width: 400px;
@@ -62,6 +63,32 @@
         }
       }
     }
+    .post {
+      background-color: white;
+      &__content {
+        display: flex;
+        margin: auto;
+        width: 450px;
+        padding: 0 20px 30px 20px;
+        
+        &__create {
+          background-color: royalblue;
+          margin: 0 20px 0 20px;
+          padding: 5px 60px 5px 60px;
+          border-radius: 15px;
+        }
+        &__destroy {
+          background-color: rgb(193, 26, 26);
+          margin: 0 20px 0 20px;
+          padding: 5px 60px 5px 60px;
+          border-radius: 15px;
+        }
+        h7 {
+          font-weight: bold;
+          color: white;
+        }
+      }
+    }
   }
   .comment {
     &__main {
@@ -72,7 +99,8 @@
       &__item {
         background-color: white;
         text-align: center;
-        padding: 30px;
+        padding: 60px 30px 30px 60px;
+        border-top: solid 2px whitesmoke;
         form {
           h3 {
             text-align: center;

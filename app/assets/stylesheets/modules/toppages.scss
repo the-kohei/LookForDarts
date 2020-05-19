@@ -170,12 +170,12 @@
     .products {
       text-align: center;
       &__item {
-        width: 320px;
+        width: 300px;
         display: inline-block;
         margin: 30px 40px 30px 40px;
         &__image {
-          width: 320px;
-          height: 300px;
+          width: 300px;
+          height: 250px;
           position: relative;
           overflow: hidden;
           z-index: auto;
