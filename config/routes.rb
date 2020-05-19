@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "toppages#index"
   resources :toppages, only: [:index]
   resources :users, only: [:edeit, :update, :show]
-  resources :posts, only: [:index, :new, :create, :destroy, :update, :edit, :show,] do
+  resources :posts do
     collection do
       get 'user_posts'
       get 'category_posts'
