@@ -23,22 +23,24 @@
               %a
                 = link_to "/posts/#{post.id}" do
                   = post.title
-            .products__item__body__category
-              %ul
-                カテゴリー :
-                %li
-                  = link_to "#" do
-                    = post.category.name
-            .products__item__body__maker
-              %ul
-                メーカー :
-                %li
-                  = link_to "#" do
-                    = post.maker.name
-            .products__item__body__name
-              %ul
-                投稿者 :
-                %li
-                  = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
+            .products__item__body__contents
+              .products__item__body__contents__left
+                .products__item__body__contents__left__menu
+                %ul
+                  カテゴリー：
+                %ul
+                  メーカー :
+                %ul
+                  投稿者 :
+              .products__item__body__contents__right
+                .products__item__body__contents__right__link
+                  %li
+                    = link_to "#"  do
+                      = post.category.name
+                  %li
+                    = link_to "#"  do
+                      = post.maker.name
+                  %li
+                    = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
 = render 'shared/shop'
 = render 'shared/footer'

@@ -194,31 +194,35 @@
             margin: 15px 0 15px 0;
             text-align: center;
             font-weight: bold;
-            
             a {
               font-weight: bold;
-              
             }
-
           }
-          &__category {
-            text-align: center;
-          }
-          &__maker {
-            text-align: center;
-          }
-          ul {
+          &__contents {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-weight: bold;
-            text-align: center;
-            padding-left: 20px;
-          }
-          li {
-            font-size: 15px;
-            font-weight: normal;
-            margin: 0 auto;
+            &__left{
+              &__menu{
+                text-align: center;
+              }
+
+            }
+            &__right{
+              margin-left: 40px;
+              &__link{
+                text-align: center;
+                
+              }
+            }
+            ul{
+              font-weight: bold;
+              font-size: 15px;
+              margin-left: 30px;
+            }
+            li {
+              font-size: 15px;
+              list-style: none;
+              margin-bottom: 16px;
+            }
           }
         }
       }
