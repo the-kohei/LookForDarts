@@ -14,18 +14,18 @@
             =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
           .products__item-body
             .products__item-body__title
-              = link_to "#" do
+              = link_to  "/posts/#{post.id}" do
                 = post.title
             .products__item-body__category
               %ul
-                種類：
+                カテゴリー：
                 %li
-                  
+                  = post.category.name
             .products__item__body__maker
               %ul
                 メーカー：
                 %li
-                  
+                  = post.maker.name
             .products__item__body__name
               %ul
                 投稿者：
