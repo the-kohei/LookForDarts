@@ -1,22 +1,26 @@
 .products
   .products__item-image
-    =image_tag 'bareru1.jpg', height: '100%', width: '100%', class: 'iamge10'
+    =link_to image_tag(post.image.to_s, height: '100%', width: '100%', class: 'iamge10'), "/posts/#{post.id}"
   .products__item-body
     .products__item-body__title
-      = link_to "#" do
+      = link_to  "/posts/#{post.id}" do
         = post.title
-    .products__item-body__category
-      %ul
-        種類：
-        %li
-          
-    .products__item__body__maker
-      %ul
-        メーカー：
-        %li
-          
-    .products__item__body__name
-      %ul
-        投稿者：
-        %li
-          = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
+    .products__item-body__contents
+      .products__item-body__contents__left
+        .products__item-body__contents__left__menu
+        %ul
+          カテゴリー：
+        %ul
+          メーカー :
+        %ul
+          投稿者 :
+      .products__item-body__contents__right
+        .products__item-body__contents__right__link
+          %li
+            = link_to "#"  do
+              = post.category.name
+          %li
+            = link_to "#"  do
+              = post.maker.name
+          %li
+            = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
