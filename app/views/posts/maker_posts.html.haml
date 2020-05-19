@@ -1,0 +1,35 @@
+= render 'shared/header'
+.content
+  .content__top
+    .content__top__title
+      = @name
+      一覧
+    .content__top__category
+      - @posts.each do |post|
+        .products
+          .products__item-image
+            =image_tag 'furaito.jpg', height: '100%', width: '100%', class: 'iamge10'
+          .products__item-body
+            .products__item-body__title
+              = link_to "#" do
+                = post.title
+            .products__item-body__contents
+              .products__item-body__contents__left
+                .products__item-body__contents__left__menu
+                  %ul
+                    カテゴリー：
+                  %ul
+                    メーカー :
+                  %ul
+                    投稿者 :
+              .products__item-body__contents__right
+                .products__item-body__contents__right__link
+                  %li
+                    = link_to post.category.name, category_posts_posts_path(category_id: post.category.id)
+                  %li
+                    = link_to post.maker.name, maker_posts_posts_path(maker_id: post.maker.id)
+                  %li
+                    = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
+      .paginate
+        =paginate(@posts)
+= render 'shared/footer'

@@ -72,10 +72,13 @@
         padding: 0 20px 50px 20px;
         
         &__create {
-          background-color: royalblue;
+          background-color: rgb(62, 93, 186);
           margin: 0 20px 0 20px;
           padding: 5px 60px 5px 60px;
           border-radius: 15px;
+        }
+        &__create:hover{
+          background: royalblue;
         }
         &__destroy {
           background-color: rgb(193, 26, 26);
@@ -83,9 +86,15 @@
           padding: 5px 60px 5px 60px;
           border-radius: 15px;
         }
+        &__destroy:hover {
+          background: rgb(218, 39, 39);
+        }
         h7 {
           font-weight: bold;
           color: white;
+        }
+        a {
+          text-decoration: none;
         }
       }
     }
@@ -116,9 +125,10 @@
             font-size: 18px;
             line-height: 50px;
             width: 250px;
-            background-color: red;
+            background-color: rgb(232, 39, 39);
             color: white;
             &:hover {
+              background: red;
             }
           }
         }

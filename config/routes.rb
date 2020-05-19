@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     collection do
       get 'user_posts'
       get 'category_posts'
+      get 'maker_posts'
     end
     resources :comments, only: :create
     collection do

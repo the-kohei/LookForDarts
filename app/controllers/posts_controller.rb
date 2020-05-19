@@ -49,6 +49,12 @@ class PostsController < ApplicationController
     @name = category.name
   end
 
+  def maker_posts
+    maker = Maker.find(params[:maker_id])
+    @posts = maker.posts.limit(8).order('id DESC').page(params[:page]).per(8)
+    @name = maker.name
+  end
+
   def search
     @posts = Post.search(params[:keyword])
   end

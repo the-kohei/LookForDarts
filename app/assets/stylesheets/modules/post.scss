@@ -28,6 +28,15 @@
         overflow: hidden;
         z-index: auto;
         }
+        &__item-image img {
+          width: 100%;
+          cursor: pointer;
+          transition-duration: 0.3s;
+        }
+        &__item-image:hover img {
+          opacity: 0.6;
+          transition-duration: 0.3s;
+        }
         &__item-body{
           background-color: white;
           color: #5d627d;

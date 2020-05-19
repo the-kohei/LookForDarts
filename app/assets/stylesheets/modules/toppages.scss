@@ -180,6 +180,16 @@
           overflow: hidden;
           z-index: auto;
         }
+        &__image img {
+          width: 100%;
+          cursor: pointer;
+          transition-duration: 0.3s;
+        }
+        &__image:hover img {
+          opacity: 0.6;
+          transition-duration: 0.3s;
+        }
+
         &__body {
           padding: 10px;
           color: #5d627b;
@@ -255,6 +265,14 @@
       margin: 20px auto 0;
       .cbtn{
         margin-right:20px;
+      }
+      .cbtn img {
+        cursor: pointer;
+        transition-duration: 0.3s;
+      }
+      .cbtn:hover img {
+        opacity: 0.6;
+        transition-duration: 0.3s;
       }
     }
   }
