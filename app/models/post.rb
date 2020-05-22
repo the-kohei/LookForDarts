@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
-  validates :title, presence: true
+  validates :title, :image, :text, :maker_id, :category_id, presence: true
   belongs_to :user
   belongs_to :category
   belongs_to :maker
