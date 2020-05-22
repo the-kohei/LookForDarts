@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
     if comment.save!
       redirect_to "/posts/#{comment.post_id}"
     else
+    comment = Comment.new(comment_params)
+    if comment.save!
+      redirect_to "/posts/#{comment.post_id}"
+    else
+      @post = Post.find(params[:post_id])
       @comments = @post.comments.includes(:user).limit(8).order('id DESC').page(params[:page]).per(5)
       @comment = Comment.new(comment_params)
       render "posts/show" 
