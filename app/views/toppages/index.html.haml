@@ -40,5 +40,11 @@
                     = link_to post.maker.name, maker_posts_posts_path(maker_id: post.maker.id)
                   %li
                     = link_to post.user.name, user_posts_posts_path(user_id: post.user.id)
+  .menu
+    .menu__content
+      = link_to posts_path do
+        .menu__content__btn
+          %h8
+            もっと見る
 = render 'shared/shop'
 = render 'shared/footer'
