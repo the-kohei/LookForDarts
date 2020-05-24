@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :show, :search, :user_posts, :category_posts, :maker_posts]
   def index
     @posts = Post.includes(:user).limit(8).order('id DESC').page(params[:page]).per(8)
   end
