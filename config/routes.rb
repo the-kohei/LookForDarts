@@ -15,5 +15,5 @@ Rails.application.routes.draw do
     end
   end
   resources :categories, only: [:index]
-  resources :makers, only: [:index, :show]
+  resources :makers, only: [:index]
 end

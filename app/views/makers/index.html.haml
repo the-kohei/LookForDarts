@@ -3,14 +3,14 @@
   .contents__top
     .contents__top__title
       メーカーから探す
-    .contents__top__category
-      - @makers.each do |maker|
-        .maker
-          .maker__item-image
+    .contents__top__maker
+      .contents__top__maker__name
+        - @makers.each do |maker|
+          .maker
             = link_to "#" do
-              =image_tag maker.image, height: '100%', width: '100%', class: 'iamge10'
-          .maker__item-body
-            .maker__item-body__name
-              = link_to "#" do
-                = maker.name
+              .maker__item-image
+                =image_tag maker.image, height: '100%', width: '100%', class: 'iamge10'
+              .maker__item-body
+                .maker__item-body__name
+                  = maker.name
 = render 'shared/footer'
