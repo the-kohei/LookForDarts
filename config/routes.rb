@@ -14,6 +14,6 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :categories, only: [:index, :show]
+  resources :categories, only: [:index]
   resources :makers, only: [:index, :show]
 end

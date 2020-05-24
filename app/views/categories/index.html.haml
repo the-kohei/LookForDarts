@@ -6,11 +6,10 @@
     .contents__top__category
       - @categories.each do |category|
         .producter
-          .producter__item-image
-            = link_to "#" do
-              =image_tag category.image, height: '100%', width: '100%', class: 'iamge10'
-          .producter__item-body
-            .producter__item-body__name
-              = link_to "#" do
+          = link_to "#" do
+            .producter__item-image
+              = image_tag category.image, height: '100%', width: '100%', class: 'iamge10'
+            .producter__item-body
+              .producter__item-body__name
                 = category.name
 = render 'shared/footer'

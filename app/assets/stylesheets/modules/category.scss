@@ -37,22 +37,15 @@
         }
         &__item-body{
         background-color: white;
-        color: #5d627d;
-        
         box-shadow: 0 3px 5px rgba(0,0,0,0.22);
         padding: 5px;
           &__name{
           overflow: hidden;
           line-height: 1.5;
-          font-size: 20px;
           text-align: center;
           font-weight: bold;
-            a {
-            font-weight: bold;
-            text-decoration: none;
-            color: #5d627b;
-            }
           }
+          
           &__data{
             text-align: center;
           }
