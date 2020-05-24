@@ -64,7 +64,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword])
+    @posts = Post.search(params[:keyword]).limit(8).order('id DESC').page(params[:page]).per(8)
   end
 
   private
