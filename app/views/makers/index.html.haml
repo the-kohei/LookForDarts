@@ -7,7 +7,7 @@
       .contents__top__maker__name
         - @makers.each do |maker|
           .maker
-            = link_to "#" do
+            = link_to maker_posts_posts_path(maker_id: maker.id) do
               .maker__item-image
                 =image_tag maker.image, height: '100%', width: '100%', class: 'iamge10'
               .maker__item-body
