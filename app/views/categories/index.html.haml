@@ -6,7 +6,7 @@
     .contents__top__category
       - @categories.each do |category|
         .producter
-          = link_to "#" do
+          = link_to category_posts_posts_path(category_id: category.id) do
             .producter__item-image
               = image_tag category.image, height: '100%', width: '100%', class: 'iamge10'
             .producter__item-body
