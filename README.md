@@ -1,7 +1,7 @@
 # LookForDartsとは？
 - ダーツの口コミを発信、共有できるアプリです。
 
-![](readme.jpg)
+![](/Users/kohei221/projects/LookForDarts/app/assets/images/readme.jpg)
 
 ## 制作背景
 - 私の趣味はダーツです。
@@ -30,7 +30,7 @@
  * MYSQL 5.7.30
 
 ## ER図
-![](ERLookForDarts.jpg)
+![](/Users/kohei221/projects/LookForDarts/app/assets/images/ERLookForDarts.jpg)
 
 
 
