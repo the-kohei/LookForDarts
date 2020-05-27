@@ -1,14 +1,17 @@
-# LookForDartsとは？
-- ダーツの口コミを発信、共有できるアプリです。
+# LookForDarts
+
+
+## LookForDartsとは？
+ダーツの口コミを発信、共有できるアプリです。
 
 ![readme](https://user-images.githubusercontent.com/60651352/83035673-b580f780-a074-11ea-8387-c21c4f580027.jpg)
 
 
 ## 制作背景
-- 私の趣味はダーツです。
-- ダーツを購入しても意外と種類も多く買ってみたけどなんか違うなと思うことがかなりあります。
-- しかもショップは都会にしかなく田舎者はオンラインショップで購入するしかありません。
-- リアルな口コミを共有し実際に足を運んで買えない人達の役に立てればと思い制作してみました。
+私は趣味でダーツをよくします。
+ダーツを購入しても意外と種類も多く買ってみたけどなんか違うなと思うことがかなりあります。
+しかもショップは都会にしかなく田舎者はオンラインショップで購入するしかないので物を見て買えません。
+そんな思いからリアルな口コミを共有し実際に足を運んで買えない人達の役に立てればいいよね、と思い制作してみました。
 
 
 
@@ -34,5 +37,55 @@
 ![ERLookForDarts](https://user-images.githubusercontent.com/60651352/83035605-9c784680-a074-11ea-9a85-437658a13a91.jpg)
 
 
++# DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|password|string|null: false|
+|email|string|null: false|
+### Association
+- has_many :comments
+- has_many :posts
 
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text||
+|title|text|null: false|
+|image|text|null: false|
+|user_id|references|null: false, foreign_key: true|
+|maker_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
 
+### Association
+- belongs_to :user
+- has_many :comments
+- belongs_to :category
+- belongs_to :maker
+
+## makersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|string|null: false|
+### Association
+- belongs_to :post
+
+## categoryテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|string|null: false|
+### Association
+- belongs_to :post
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|references|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :post
