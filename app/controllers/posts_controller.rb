@@ -10,21 +10,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    post = Post.new(post_params)
-    if post.save
-      redirect_to "/posts", notice: '投稿完了しました'
-    else
-      flash.now[:notice] = '入力は全て必須です'
-      render "posts/new"
-    end
-    
   end
 
   def show
     @comment = Comment.new
     @post = Post.find(params[:id])
     @comments = @post.comments.includes(:user).limit(8).order('id DESC').page(params[:page]).per(5)
-    
   end
 
   def destroy
