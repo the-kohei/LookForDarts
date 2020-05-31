@@ -6,10 +6,18 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    
   end
 
   def create
     @post = Post.create(post_params)
+    post = Post.new(post_params)
+    if post.save
+      render :create
+    else
+      flash.now[:notice] = '入力は全て必須です'
+      render "posts/new"
+    end
   end
 
   def show
